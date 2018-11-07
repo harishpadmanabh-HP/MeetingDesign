@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <ListView
+        android:id="@+id/meeting_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.getbase.floatingactionbutton.FloatingActionsMenu
+        android:id="@+id/multiple_actions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_gravity="end|bottom"
+        android:layout_marginBottom="119dp"
+        android:layout_marginEnd="25dp"
+        android:gravity="right"
+        app:fab_addButtonColorNormal="#FF1493"
+        app:fab_addButtonColorPressed="#fff"
+        app:fab_addButtonPlusIconColor="#fff">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tomorrow!"
+                android:textColor="#000" />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_tomorrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="#fff"
+                app:fab_colorPressed="#fff"
+                android:src="@drawable/tomorrow_icon_small"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="This week!"
+                android:textColor="#000" />
+
+            <com.getbase.floatingactionbutton.FloatingActionButton
+                android:id="@+id/fab_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:fab_colorNormal="#fff"
+                app:fab_colorPressed="#fff"
+                android:layout_gravity="fill"
+                android:src="@drawable/week_icon"/>
+        </LinearLayout>
+
+
+    </com.getbase.floatingactionbutton.FloatingActionsMenu>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/fab_add_meeting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="46dp"
+        android:layout_marginEnd="72dp"
+        android:clickable="true"
+        android:src="@drawable/ic_add_black_24dp" />
+
+</RelativeLayout>
